@@ -1,0 +1,17 @@
+name: docker-pipeline-Hari
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print your name
+        run: echo "Hello world - 22IT011"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker Build
+        run: docker build -t Hari/ml-model-22it011 .
+
+      - name: Docker Images
+        run: docker images
